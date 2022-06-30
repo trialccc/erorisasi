@@ -16,9 +16,3 @@ ENV PM2_SECRET_KEY 44ahpi4v79ureap
 
 CMD ["pm2-runtime", "index.js"]
 
-
-COPY . .
-
-EXPOSE 5000
-
-CMD ["npm", "start"]
