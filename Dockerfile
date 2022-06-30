@@ -10,11 +10,8 @@ RUN apt-get update && \
 
 COPY package.json .
 
-RUN npm install pm2 -g
-ENV PM2_PUBLIC_KEY drbnfobrl2hn8hm
-ENV PM2_SECRET_KEY 44ahpi4v79ureap
+RUN npm install && npm install pm2 -g 
 
-CMD ["pm2-runtime", "index.js"]
 COPY . .
 
 EXPOSE 5000
